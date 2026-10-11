@@ -7,7 +7,9 @@ A collection of neural network architectures implemented from scratch in PyTorch
 ```
 .
 ├── Basics/                  # Foundational models, one notebook per exercise
-│   └── lin_regression.ipynb
+│   ├── lin_regression.ipynb
+│   ├── custom_dataset.ipynb
+│   └── custom_activation.ipynb
 ├── main.py
 ├── pyproject.toml
 └── README.md
@@ -20,6 +22,8 @@ Each architecture lives in its own notebook. A notebook states the problem, buil
 | Architecture | Location | Status |
 |---|---|---|
 | Linear Regression | `Basics/lin_regression.ipynb` | In progress |
+| Custom Dataset and DataLoader (CSV) | `Basics/custom_dataset.ipynb` | Done |
+| Custom Activation Function (`tanh(x) + x`) | `Basics/custom_activation.ipynb` | Done |
 
 More architectures will be added over time.
 
@@ -29,6 +33,7 @@ More architectures will be added over time.
 
 - Python 3.13 or later
 - [PyTorch](https://pytorch.org/get-started/locally/)
+- pandas (used by the custom dataset notebook)
 - Jupyter, or any editor that can run notebooks (VS Code, Colab)
 
 ### Setup
@@ -36,7 +41,7 @@ More architectures will be added over time.
 ```bash
 git clone <repo-url>
 cd From-Scratch---PyTorch
-uv add torch jupyter   # or: pip install torch jupyter
+uv add torch pandas jupyter   # or: pip install torch pandas jupyter
 jupyter notebook
 ```
 
